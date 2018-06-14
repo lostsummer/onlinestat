@@ -1,0 +1,5 @@
+app:
+    restart: always
+    build: ./app
+    ports:
+        - 8888:80

@@ -1,0 +1,4 @@
+sanic
+redis
+pyyaml
+

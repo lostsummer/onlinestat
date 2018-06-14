@@ -1,0 +1,11 @@
+redis:
+  - {host: 192.168.8.211, port: 6379, db: 3}
+  - {host: 192.168.8.211, port: 6379, db: 5}
+
+server:
+  host: 0.0.0.0
+  port: 80
+
+queue:
+  redis: {host: 192.168.8.211, port: 6379, db: 2}
+  key: EMoney.Tongji:Page_OnlineTime
