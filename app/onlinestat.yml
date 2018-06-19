@@ -1,6 +1,6 @@
 redis:
-  - {host: 172.31.23.16, port: 6370, db: 0}
-  - {host: 172.31.23.16, port: 6370, db: 1}
+  - {host: 172.31.23.16, port: 6390, db: 0}
+  - {host: 172.31.23.16, port: 6390, db: 1}
 
 server:
   host: 0.0.0.0

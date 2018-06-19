@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import asyncio
+import time
 import app.config
 from app.redisutil import webData2Redis
 from app.redisqueue import pushQueue
@@ -25,6 +26,11 @@ async def oneline(request):
                 status=200
         )
     else:
+        web_time = int(hb_data['time'])
+        server_time = int(time.time()*1000)
+        if abs(server_time - web_time) > 180*1000:
+            hb_data['time'] = str(server_time)
+
         push, msg = webData2Redis(hb_data)
         if push:
             pushQueue(msg)
